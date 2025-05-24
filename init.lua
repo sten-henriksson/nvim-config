@@ -28,3 +28,6 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+require("toggleterm").setup{}
+vim.opt.relativenumber = true -- Show relative line numbers on other lines

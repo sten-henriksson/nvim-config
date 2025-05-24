@@ -13,16 +13,40 @@ return {
     end,
   },
 
-  -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
+  {
+    'rmagatti/auto-session',
+    lazy = false,
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+    ---enables autocomplete for opts
+    ---@module "auto-session"
+    ---@type AutoSession.Config
+    opts = {
+      suppressed_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
+      -- log_level = 'debug',
+    }
+  }
+  ,
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        -- Existing
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+
+        -- Added for Python
+        "python",
+
+        -- Added for Frontend
+        "javascript",
+        "typescript",
+        "tsx", -- For TypeScript with JSX. The javascript parser often handles standard JSX.
+        "json",
+      },
+   },
+ },
 }
