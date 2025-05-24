@@ -30,4 +30,4 @@ vim.schedule(function()
 end)
 
 require("toggleterm").setup{}
-vim.opt.relativenumber = true -- Show relative line numbers on other lines
+vim.opt.relativenumber = true -- Show relative line numbers on other lines 
