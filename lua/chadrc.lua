@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "carbonfox",
+	theme = "gatekeeper",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -17,7 +17,7 @@ M.base46 = {
 -- M.nvdash = { load_on_startup = true }
 M.ui = {
       tabufline = {
-      enabled=false
+--      enabled=false
      }
 }
 
