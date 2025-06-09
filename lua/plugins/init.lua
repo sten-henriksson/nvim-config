@@ -27,6 +27,7 @@ return {
     }
   }
   ,
+{ 'vuciv/golf',lazy = false },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
