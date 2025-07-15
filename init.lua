@@ -33,6 +33,12 @@ require("toggleterm").setup{}
 vim.opt.relativenumber = true -- Show relative line numbers on other lines 
 vim.opt.scrolloff = 999
 vim.opt.foldtext = ""
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 1
+vim.opt.foldnestmax = 2
+vim.opt.foldcolumn = "0"
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
 local opt = vim.opt
 
