@@ -39,6 +39,9 @@ vim.opt.foldnestmax = 2
 vim.opt.foldcolumn = "0"
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.undofile = true
+vim.opt.undolevels = 1000
+vim.opt.undoreload = 10000
 
 local opt = vim.opt
 
