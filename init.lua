@@ -30,22 +30,22 @@ vim.schedule(function()
 end)
 
 require("toggleterm").setup{}
-vim.opt.relativenumber = true -- Show relative line numbers on other lines 
-vim.opt.scrolloff = 999
-vim.opt.foldtext = ""
-vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 1
-vim.opt.foldnestmax = 2
-vim.opt.foldcolumn = "0"
+
+-- General Editor Options
+vim.opt.relativenumber = true -- Show relative line numbers
+vim.opt.scrolloff = 999 -- Keep cursor centered vertically
+
+-- Folding Options
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevel = 99       -- Set a high fold level to keep them open
+vim.opt.foldlevelstart = 99  -- Prevent auto-folding when opening a file
+vim.opt.foldtext = ""          -- Keep fold text clean
+vim.opt.foldnestmax = 10       -- Adjust max fold nesting if needed
+vim.opt.foldcolumn = "0"     -- Don't show a fold column
+
+-- Undo File Options
 vim.opt.undofile = true
 vim.opt.undolevels = 1000
 vim.opt.undoreload = 10000
-
-local opt = vim.opt
-
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
-
 
