@@ -25,6 +25,7 @@ return {
         "css",
         -- Added for Python
         "python",
+        "rust",
         -- Added for Frontend
         "javascript",
         "typescript",
@@ -32,6 +33,35 @@ return {
         "json",
       },
     },
+  },
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^5", -- Recommended
+    lazy = false, -- This plugin is already lazy
+    ft = "rust",
+    config = function()
+      local on_attach = require("nvchad.configs.lspconfig").on_attach
+      local capabilities = require("nvchad.configs.lspconfig").capabilities
+
+      vim.g.rustaceanvim = {
+        server = {
+          on_attach = function(client, bufnr)
+            on_attach(client, bufnr)
+            -- you can also add your own keybinds here
+          end,
+          capabilities = capabilities,
+        },
+      }
+    end,
+  },
+  {
+    "saecki/crates.nvim",
+    ft = { "rust", "toml" },
+    config = function(_, opts)
+      local crates = require "crates"
+      crates.setup(opts)
+      crates.show()
+    end,
   },
   {
     "mbbill/undotree",
